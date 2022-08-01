@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2022-08-01T19:12:07.960Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="hgJuPAhzqud_Chzxumbm" version="20.2.2" type="github">
+<mxfile host="app.diagrams.net" modified="2022-08-01T19:18:22.369Z" agent="5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/103.0.0.0 Safari/537.36" etag="OXk07CbxqMOew2fBawGI" version="20.2.2" type="github">
   <diagram id="AyhH0Zav96XGmbRsX0_V" name="Page-1">
-    <mxGraphModel dx="1538" dy="1056" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+    <mxGraphModel dx="681" dy="1057" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -60,7 +60,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-14" value="properties" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" vertex="1" parent="1">
-          <mxGeometry x="530" y="100" width="180" height="510" as="geometry" />
+          <mxGeometry x="530" y="100" width="180" height="580" as="geometry" />
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-15" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-14">
           <mxGeometry y="30" width="180" height="30" as="geometry" />
@@ -75,8 +75,21 @@
             <mxRectangle width="150" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="SNar2bH-CFNuc4cx62G1-18" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-14">
+        <mxCell id="SNar2bH-CFNuc4cx62G1-145" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-14">
           <mxGeometry y="60" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SNar2bH-CFNuc4cx62G1-146" value="FK" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-145">
+          <mxGeometry width="30" height="30" as="geometry">
+            <mxRectangle width="30" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SNar2bH-CFNuc4cx62G1-147" value="owner" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-145">
+          <mxGeometry x="30" width="150" height="30" as="geometry">
+            <mxRectangle width="150" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SNar2bH-CFNuc4cx62G1-18" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-14">
+          <mxGeometry y="90" width="180" height="30" as="geometry" />
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-19" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-18">
           <mxGeometry width="30" height="30" as="geometry">
@@ -89,7 +102,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-21" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-14">
-          <mxGeometry y="90" width="180" height="30" as="geometry" />
+          <mxGeometry y="120" width="180" height="30" as="geometry" />
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-22" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-21">
           <mxGeometry width="30" height="30" as="geometry">
@@ -102,7 +115,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-24" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-14">
-          <mxGeometry y="120" width="180" height="30" as="geometry" />
+          <mxGeometry y="150" width="180" height="30" as="geometry" />
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-25" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-24">
           <mxGeometry width="30" height="30" as="geometry">
@@ -115,7 +128,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-96" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-14">
-          <mxGeometry y="150" width="180" height="30" as="geometry" />
+          <mxGeometry y="180" width="180" height="30" as="geometry" />
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-97" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-96">
           <mxGeometry width="30" height="30" as="geometry">
@@ -128,7 +141,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-115" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-14">
-          <mxGeometry y="180" width="180" height="30" as="geometry" />
+          <mxGeometry y="210" width="180" height="30" as="geometry" />
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-116" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-115">
           <mxGeometry width="30" height="30" as="geometry">
@@ -141,7 +154,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-118" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-14">
-          <mxGeometry y="210" width="180" height="30" as="geometry" />
+          <mxGeometry y="240" width="180" height="30" as="geometry" />
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-119" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-118">
           <mxGeometry width="30" height="30" as="geometry">
@@ -154,7 +167,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-121" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-14">
-          <mxGeometry y="240" width="180" height="30" as="geometry" />
+          <mxGeometry y="270" width="180" height="30" as="geometry" />
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-122" value="        " style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-121">
           <mxGeometry width="30" height="30" as="geometry">
@@ -167,7 +180,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-124" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-14">
-          <mxGeometry y="270" width="180" height="30" as="geometry" />
+          <mxGeometry y="300" width="180" height="30" as="geometry" />
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-125" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-124">
           <mxGeometry width="30" height="30" as="geometry">
@@ -180,7 +193,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-127" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-14">
-          <mxGeometry y="300" width="180" height="30" as="geometry" />
+          <mxGeometry y="330" width="180" height="30" as="geometry" />
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-128" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-127">
           <mxGeometry width="30" height="30" as="geometry">
@@ -193,7 +206,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-130" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-14">
-          <mxGeometry y="330" width="180" height="30" as="geometry" />
+          <mxGeometry y="360" width="180" height="30" as="geometry" />
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-131" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-130">
           <mxGeometry width="30" height="30" as="geometry">
@@ -206,7 +219,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-133" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-14">
-          <mxGeometry y="360" width="180" height="30" as="geometry" />
+          <mxGeometry y="390" width="180" height="30" as="geometry" />
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-134" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-133">
           <mxGeometry width="30" height="30" as="geometry">
@@ -219,7 +232,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-136" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-14">
-          <mxGeometry y="390" width="180" height="30" as="geometry" />
+          <mxGeometry y="420" width="180" height="30" as="geometry" />
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-137" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-136">
           <mxGeometry width="30" height="30" as="geometry">
@@ -231,8 +244,21 @@
             <mxRectangle width="150" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
+        <mxCell id="SNar2bH-CFNuc4cx62G1-185" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-14">
+          <mxGeometry y="450" width="180" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="SNar2bH-CFNuc4cx62G1-186" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-185">
+          <mxGeometry width="30" height="30" as="geometry">
+            <mxRectangle width="30" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="SNar2bH-CFNuc4cx62G1-187" value="country" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-185">
+          <mxGeometry x="30" width="150" height="30" as="geometry">
+            <mxRectangle width="150" height="30" as="alternateBounds" />
+          </mxGeometry>
+        </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-139" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-14">
-          <mxGeometry y="420" width="180" height="30" as="geometry" />
+          <mxGeometry y="480" width="180" height="30" as="geometry" />
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-140" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-139">
           <mxGeometry width="30" height="30" as="geometry">
@@ -245,7 +271,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-142" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-14">
-          <mxGeometry y="450" width="180" height="30" as="geometry" />
+          <mxGeometry y="510" width="180" height="30" as="geometry" />
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-143" value="" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-142">
           <mxGeometry width="30" height="30" as="geometry">
@@ -253,19 +279,6 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-144" value="active_y/n" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-142">
-          <mxGeometry x="30" width="150" height="30" as="geometry">
-            <mxRectangle width="150" height="30" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="SNar2bH-CFNuc4cx62G1-145" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=0;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-14">
-          <mxGeometry y="480" width="180" height="30" as="geometry" />
-        </mxCell>
-        <mxCell id="SNar2bH-CFNuc4cx62G1-146" value="FK" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;editable=1;overflow=hidden;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-145">
-          <mxGeometry width="30" height="30" as="geometry">
-            <mxRectangle width="30" height="30" as="alternateBounds" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="SNar2bH-CFNuc4cx62G1-147" value="owner" style="shape=partialRectangle;connectable=0;fillColor=none;top=0;left=0;bottom=0;right=0;align=left;spacingLeft=6;overflow=hidden;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-145">
           <mxGeometry x="30" width="150" height="30" as="geometry">
             <mxRectangle width="150" height="30" as="alternateBounds" />
           </mxGeometry>
@@ -282,7 +295,7 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-59" value="reservations" style="shape=table;startSize=30;container=1;collapsible=1;childLayout=tableLayout;fixedRows=1;rowLines=0;fontStyle=1;align=center;resizeLast=1;" vertex="1" parent="1">
-          <mxGeometry x="70" y="390" width="180" height="240" as="geometry" />
+          <mxGeometry x="70" y="390" width="180" height="190" as="geometry" />
         </mxCell>
         <mxCell id="SNar2bH-CFNuc4cx62G1-60" value="" style="shape=tableRow;horizontal=0;startSize=0;swimlaneHead=0;swimlaneBody=0;fillColor=none;collapsible=0;dropTarget=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;top=0;left=0;right=0;bottom=1;" vertex="1" parent="SNar2bH-CFNuc4cx62G1-59">
           <mxGeometry y="30" width="180" height="30" as="geometry" />
@@ -451,8 +464,8 @@
             <Array as="points">
               <mxPoint x="130" y="145" />
               <mxPoint x="130" y="300" />
-              <mxPoint x="330" y="300" />
-              <mxPoint x="330" y="595" />
+              <mxPoint x="480" y="300" />
+              <mxPoint x="480" y="175" />
             </Array>
           </mxGeometry>
         </mxCell>
