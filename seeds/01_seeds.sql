@@ -6,7 +6,7 @@ INSERT INTO users (name, email, password) VALUES ('Rick Astley', 'yougotrickroll
 
 INSERT INTO properties (owner_id, title, description, thumbnail_photo_url, cover_photo_url, 
   cost_per_night, parking_spaces, number_of_bathrooms, number_of_bedrooms, country, street, 
-  city, province, postal_code, active) 
+  city, province, post_code, active) 
   VALUES (
     1, 
     'Abbotsford Retreat', 
@@ -27,7 +27,7 @@ INSERT INTO properties (owner_id, title, description, thumbnail_photo_url, cover
 
 INSERT INTO properties (owner_id, title, description, thumbnail_photo_url, cover_photo_url, 
   cost_per_night, parking_spaces, number_of_bathrooms, number_of_bedrooms, country, street, 
-  city, province, postal_code, active) 
+  city, province, post_code, active) 
   VALUES (
     3, 
     'Toronto Retreat', 
@@ -48,7 +48,7 @@ INSERT INTO properties (owner_id, title, description, thumbnail_photo_url, cover
 
 INSERT INTO properties (owner_id, title, description, thumbnail_photo_url, cover_photo_url, 
   cost_per_night, parking_spaces, number_of_bathrooms, number_of_bedrooms, country, street, 
-  city, province, postal_code, active) 
+  city, province, post_code, active) 
   VALUES (
     4, 
     'Banff Breathtaking Breakaway', 
