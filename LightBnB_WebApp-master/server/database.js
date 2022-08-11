@@ -54,7 +54,6 @@ exports.getUserWithId = getUserWithId;
  * @return {Promise<{}>} A promise to the user.
  */
 const addUser =  function(user) {
-  console.log(user.name, user.email, user.password);
   return pool
     .query(
       `INSERT INTO users (name, email, password) VALUES ($1, $2, $3)
@@ -64,7 +63,6 @@ const addUser =  function(user) {
       return result.rows[0];
     })
     .catch((err) => {
-      console.log(err.message);
       return(err.message);
     });
 }
@@ -74,11 +72,32 @@ exports.addUser = addUser;
 
 /**
  * Get all reservations for a single user.
- * @param {string} guest_id The id of the user.
- * @return {Promise<[{}]>} A promise to the reservations.
  */
 const getAllReservations = function(guest_id, limit = 10) {
-  return getAllProperties(null, 2);
+  console.log(guest_id, limit);
+  return pool
+    .query(
+      `SELECT properties.thumbnail_photo_url, properties.title, properties.number_of_bedrooms, 
+      properties.number_of_bathrooms, properties.parking_spaces, reservations.id,  
+      reservations.start_date, reservations.end_date, 
+      avg(property_reviews.rating) as average_rating, properties.cost_per_night
+      FROM reservations
+      JOIN properties ON reservations.property_id = properties.id
+      JOIN property_reviews ON properties.id = property_reviews.property_id
+      JOIN users ON users.id = reservations.guest_id
+      WHERE reservations.guest_id = $1
+      GROUP BY reservations.id, properties.title, properties.cost_per_night, 
+      properties.thumbnail_photo_url, properties.number_of_bedrooms, properties.number_of_bathrooms, 
+      properties.parking_spaces
+      ORDER BY reservations.start_date
+      LIMIT $2;`, [guest_id, limit])
+  .then((result) => {
+    console.log(result);
+    return result.rows;
+  })
+  .catch((err) => {
+    return(err.message);
+  })
 }
 exports.getAllReservations = getAllReservations;
 

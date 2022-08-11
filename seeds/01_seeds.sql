@@ -68,13 +68,13 @@ INSERT INTO properties (owner_id, title, description, thumbnail_photo_url, cover
   );
 
 INSERT INTO reservations (start_date, end_date, property_id, guest_id) 
-  VALUES ('2018-09-11', '2019-09-26', 2, 3);
+  VALUES ('2018-09-11', '2019-09-26', 2, 1);
 
 INSERT INTO reservations (start_date, end_date, property_id, guest_id) 
-  VALUES ('2019-01-04', '2019-02-01', 2, 2);
+  VALUES ('2019-01-04', '2019-02-01', 2, 1);
 
 INSERT INTO reservations (start_date, end_date, property_id, guest_id) 
-  VALUES ('2022-09-11', '2022-09-16', 1, 4);
+  VALUES ('2022-09-11', '2022-09-16', 1, 1);
 
 INSERT INTO property_reviews (guest_id, property_id, reservation_id, rating, message) 
   VALUES (3, 2, 1, 4, 'awesome');
