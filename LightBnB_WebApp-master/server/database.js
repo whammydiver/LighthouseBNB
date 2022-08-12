@@ -140,7 +140,6 @@ exports.getAllProperties = getAllProperties;
 
 //
 const addProperty = function(property) {
-  console.log(property);
   const queryParams = [];
   queryParams.push(
     property.title, 
@@ -155,7 +154,7 @@ const addProperty = function(property) {
     property.country,
     property.city,
     property.province,
-    property. post_code,
+    property.post_code,
     property.owner_id);
   console.log(queryParams);
   return pool.query(`
