@@ -20,9 +20,9 @@ const getUserWithEmail = function(email) {
       return result.rows[0];
     })
     .catch((err) => {
-      return(err.message);
+      return (err.message);
     });
-}
+};
 exports.getUserWithEmail = getUserWithEmail;
 
 //
@@ -35,9 +35,9 @@ const getUserWithId = function(id) {
       return result.rows[0];
     })
     .catch((err) => {
-      return(err.message);
+      return (err.message);
     });
-}
+};
 exports.getUserWithId = getUserWithId;
 
 
@@ -52,9 +52,9 @@ const addUser =  function(user) {
       return result.rows[0];
     })
     .catch((err) => {
-      return(err.message);
+      return (err.message);
     });
-}
+};
 exports.addUser = addUser;
 
 //
@@ -76,14 +76,14 @@ const getAllReservations = function(guest_id, limit = 10) {
       properties.parking_spaces
       ORDER BY reservations.start_date
       LIMIT $2;`, [guest_id, limit])
-  .then((result) => {
-    console.log(result);
-    return result.rows;
-  })
-  .catch((err) => {
-    return(err.message);
-  })
-}
+    .then((result) => {
+      console.log(result);
+      return result.rows;
+    })
+    .catch((err) => {
+      return (err.message);
+    });
+};
 exports.getAllReservations = getAllReservations;
 
 //
@@ -101,7 +101,8 @@ const getAllProperties = (options, limit) => {
     queryParams.push(`%${options.city}%`);
     queryString += ` AND city LIKE $${queryParams.length}`;
   }
-    if (options.owner_id) {
+  
+  if (options.owner_id) {
     queryParams.push(Number(options.owner_id));
     queryString += ` AND owner_id = $${queryParams.length}`;
   }
@@ -139,6 +140,27 @@ exports.getAllProperties = getAllProperties;
 
 //
 const addProperty = function(property) {
-
-}
+  console.log(property);
+  const queryParams = [];
+  queryParams.push(
+    property.title, 
+    property.description, 
+    Number(property.number_of_bedrooms), 
+    Number(property.number_of_bathrooms), 
+    Number(property.parking_spaces), 
+    Number(property.cost_per_night),
+    property.thumbnail_photo_url, 
+    property.cover_photo_url, 
+    property.street,
+    property.country,
+    property.city,
+    property.province,
+    property. post_code,
+    property.owner_id);
+  console.log(queryParams);
+  return pool.query(`
+  INSERT INTO properties (title, description, number_of_bedrooms, number_of_bathrooms, parking_spaces, 
+    cost_per_night, thumbnail_photo_url, cover_photo_url, street, country, city, province, post_code, owner_id)
+    VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING *;`, queryParams);
+};
 exports.addProperty = addProperty;
