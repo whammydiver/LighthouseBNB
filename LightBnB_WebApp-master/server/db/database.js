@@ -1,96 +1,84 @@
-// const properties = require('./json/properties.json');
-// const users = require('./json/users.json');
+// refactored BD call through index.js instead of pg directly.
+const db = require('./index.js');
 
-
-const { Pool } = require('pg');
-
-const pool = new Pool({
-  host: 'localhost',
-  database: 'lightbnb'
-});
-
-
-//
+// queries DB to verify user.
 const getUserWithEmail = function(email) {
-  return pool
-    .query(
-      `SELECT * FROM users WHERE email = $1`,
-      [email])
-    .then((result) => {
-      return result.rows[0];
-    })
-    .catch((err) => {
-      return (err.message);
-    });
+  return db.query(
+    `SELECT * FROM users WHERE email = $1;`,
+    [email])
+  .then((result) => {
+    return result.rows[0];
+  })
+  .catch((err) => {
+    return (err.message);
+  });
 };
 exports.getUserWithEmail = getUserWithEmail;
 
-//
+
 const getUserWithId = function(id) {
-  return pool
-    .query(
-      `SELECT * FROM users WHERE id = $1`,
-      [id])
-    .then((result) => {
-      return result.rows[0];
-    })
-    .catch((err) => {
-      return (err.message);
-    });
+  return db.query(
+    `SELECT * FROM users WHERE id = $1`,
+    [id])
+  .then((result) => {
+    return result.rows[0];
+  })
+  .catch((err) => {
+    return (err.message);
+  });
 };
 exports.getUserWithId = getUserWithId;
 
 
-//
 const addUser =  function(user) {
-  return pool
-    .query(
-      `INSERT INTO users (name, email, password) VALUES ($1, $2, $3)
-      RETURNING *;`,
-      [user.name, user.email, user.password])
-    .then((result) => {
-      return result.rows[0];
-    })
-    .catch((err) => {
-      return (err.message);
-    });
+  return db.query(
+    `INSERT INTO users (name, email, password) VALUES ($1, $2, $3)
+    RETURNING *;`,
+    [user.name, user.email, user.password])
+  .then((result) => {
+    return result.rows[0];
+  })
+  .catch((err) => {
+    return (err.message);
+  });
 };
 exports.addUser = addUser;
 
-//
+
 const getAllReservations = function(guest_id, limit = 10) {
-  console.log(guest_id, limit);
-  return pool
-    .query(
-      `SELECT properties.thumbnail_photo_url, properties.title, properties.number_of_bedrooms, 
-      properties.number_of_bathrooms, properties.parking_spaces, reservations.id,  
-      reservations.start_date, reservations.end_date, 
-      avg(property_reviews.rating) as average_rating, properties.cost_per_night
-      FROM reservations
-      JOIN properties ON reservations.property_id = properties.id
-      JOIN property_reviews ON properties.id = property_reviews.property_id
-      JOIN users ON users.id = reservations.guest_id
-      WHERE reservations.guest_id = $1
-      GROUP BY reservations.id, properties.title, properties.cost_per_night, 
-      properties.thumbnail_photo_url, properties.number_of_bedrooms, properties.number_of_bathrooms, 
-      properties.parking_spaces
-      ORDER BY reservations.start_date
-      LIMIT $2;`, [guest_id, limit])
-    .then((result) => {
-      console.log(result);
-      return result.rows;
-    })
-    .catch((err) => {
-      return (err.message);
-    });
+  return db.query(
+    `SELECT properties.thumbnail_photo_url, properties.title, properties.number_of_bedrooms, 
+    properties.number_of_bathrooms, properties.parking_spaces, reservations.id,  
+    reservations.start_date, reservations.end_date, 
+    avg(property_reviews.rating) as average_rating, properties.cost_per_night
+    FROM reservations
+    JOIN properties ON reservations.property_id = properties.id
+    JOIN property_reviews ON properties.id = property_reviews.property_id
+    JOIN users ON users.id = reservations.guest_id
+    WHERE reservations.guest_id = $1
+    GROUP BY reservations.id, properties.title, properties.cost_per_night, 
+    properties.thumbnail_photo_url, properties.number_of_bedrooms, properties.number_of_bathrooms, 
+    properties.parking_spaces
+    ORDER BY reservations.start_date
+    LIMIT $2;`, [guest_id, limit])
+  .then((result) => {
+    return result.rows;
+  })
+  .catch((err) => {
+    return (err.message);
+  });
 };
 exports.getAllReservations = getAllReservations;
 
-//
+
+// queries DB based on optional criteria provided in options object created by user input
 const getAllProperties = (options, limit) => {
   
   const queryParams = [];
   
+  // WHERE 1 = 1 permits simpler logic in if statements below to simply add an AND qualifier
+  // Since search criteria are optional, array indexing must be dynamic. queryParams.length maps 
+  // array index when criteria is used. 
   let queryString = `
   SELECT properties.*, avg(property_reviews.rating) as average_rating
   FROM properties
@@ -132,13 +120,14 @@ const getAllProperties = (options, limit) => {
   LIMIT $${queryParams.length}
   `;
 
-  console.log(queryString, queryParams);
-
-  return pool.query(queryString, queryParams).then((res) => res.rows);
+  return db.query(queryString, queryParams)
+    .then((res) => res.rows);
 };
 exports.getAllProperties = getAllProperties;
 
-//
+// Creates a new property from user input.
+// Since no fields are optional, dynamic array mapping using queryParams.length not needed. 
+// Each value will have a static array index number
 const addProperty = function(property) {
   const queryParams = [];
   queryParams.push(
@@ -156,8 +145,7 @@ const addProperty = function(property) {
     property.province,
     property.post_code,
     property.owner_id);
-  console.log(queryParams);
-  return pool.query(`
+  return db.query(`
   INSERT INTO properties (title, description, number_of_bedrooms, number_of_bathrooms, parking_spaces, 
     cost_per_night, thumbnail_photo_url, cover_photo_url, street, country, city, province, post_code, owner_id)
     VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14) RETURNING *;`, queryParams);
